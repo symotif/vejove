@@ -1,0 +1,5 @@
+{
+	"avdmanager.executable": "/opt/android-sdk/tools/bin/avdmanager",
+	"avdmanager.sdkManager": "/opt/android-sdk/tools/bin/sdkmanager",
+	"avdmanager.sdkPath": "/opt/android-sdk"
+}
