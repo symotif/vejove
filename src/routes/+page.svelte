@@ -45,6 +45,18 @@
 		readDummyTextFile();
 		Geolocation.watchPosition({}, (location) => loc = location);
 	});
+
+	let MedicationList = [
+		{
+			name: "Metformin",
+			dose: 500
+		},
+		{
+			name: "Insulin Glargine", 
+			dose: "5 units"
+		}
+	];
+
 </script>
 
 <h1>Your PHR</h1>
@@ -52,8 +64,13 @@
 <h1>{fileData}</h1>
 <div>
 	<h2>Medication List:</h2>
-	<p>1. Metformin 500</p>
-	<p>2. Insulin Glargine</p>
+	
+	<ul>
+		{#each MedicationList as med}
+			<li>{med.name}{med.dose}</li>
+		{/each}
+	</ul>
+	
 	<h2>Geolocation</h2>
 	<p>Your location is:</p>
 	<p>Latitude: {loc ? loc.coords.latitude : 'Getting location...'}</p>
