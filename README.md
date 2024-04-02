@@ -36,3 +36,23 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+
+# Development
+
+## setup
+1. clone
+2. `npm i`
+
+## running with hot module reloading
+1. (optional) plug in android device
+2. `npm run build`
+3. `npm run dev` in another terminal (you gotta keep this running while you code)
+4. `npx cap sync`
+5. `npx cap run android`
+6. choose your android device
+
+`npx cap copy` might be needed betwwen steps 4 and 5 when setting this up
+
+# production
+make sure to delete the server options in the capacitor config, this is only for dev

@@ -2,13 +2,13 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'com.example.app',
-  appName: 'phr',
+  appName: 'vejove',
   webDir: 'build',
   bundledWebRuntime: false,
   server: {
-    url: 'http://192.168.0.200:5173',
+    url: 'http://192.168.0.62:5173',
     cleartext: true,
-    allowNavigation: ['*'],
+    //allowNavigation: ['*'],
     //androidScheme: 'https'
   },
 };
