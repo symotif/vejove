@@ -59,7 +59,7 @@
 
 </script>
 
-<h1>Vejove</h1>
+<h1>Vejove!</h1>
 <p>keep track of your health</p>
 
 <h1>{fileData}</h1>
