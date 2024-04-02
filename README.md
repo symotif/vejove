@@ -55,4 +55,10 @@ You can preview the production build with `npm run preview`.
 `npx cap copy` might be needed betwwen steps 4 and 5 when setting this up
 
 # production
-make sure to delete the server options in the capacitor config, this is only for dev
+
+to install it on your device:
+1. make sure to comment out the server options in the capacitor config, this is only for dev
+2. plug in your device (optional)
+3. `npm run install`
+4. choose your android device
+5. you can now unplug your device
