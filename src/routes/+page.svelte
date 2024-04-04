@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { Geolocation } from '@capacitor/geolocation';
 	import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
+	import { Button } from "$lib/components/ui/button";
 
 	let fileData, loc;
 
@@ -61,7 +62,7 @@
 
 <h1 class="text-red-600 font-bold underline">Vejove!</h1>
 <p>keep track of your health</p>
-
+<Button class="bg-amber-600 text-green-300">Click me</Button>
 <h1>{fileData}</h1>
 <div>
 	<h2 class="text-3xl font-bold underline">Medication List:</h2>
