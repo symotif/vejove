@@ -1,8 +1,10 @@
-<script>
+<script lang="ts">
 	import { onMount } from 'svelte';
 	import { Geolocation } from '@capacitor/geolocation';
 	import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 	import { Button } from "$lib/components/ui/button";
+	import { Textarea } from "$lib/components/ui/textarea";
+	import { Input } from "$lib/components/ui/input";
 
 	let fileData, loc;
 
@@ -62,7 +64,15 @@
 
 <h1 class="text-red-600 font-bold underline">Vejove!</h1>
 <p>keep track of your health</p>
+<Textarea placeholder="Type your message here." />
+
+<form class="flex w-full max-w-sm items-center space-x-2">
+	<Input type="email" placeholder="email" />
+	<Button type="submit">Subscribe</Button>
+  </form>
+
 <Button class="bg-amber-600 text-green-300">Click me</Button>
+
 <h1>{fileData}</h1>
 <div>
 	<h2 class="text-3xl font-bold underline">Medication List:</h2>
