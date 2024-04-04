@@ -59,12 +59,12 @@
 
 </script>
 
-<h1>Vejove!</h1>
+<h1 class="text-red-600 font-bold underline">Vejove!</h1>
 <p>keep track of your health</p>
 
 <h1>{fileData}</h1>
 <div>
-	<h2>Medication List:</h2>
+	<h2 class="text-3xl font-bold underline">Medication List:</h2>
 	
 	<ul>
 		{#each MedicationList as med}
@@ -78,6 +78,5 @@
 	<p>Longitude: {loc ? loc.coords.longitude : 'Getting location...'}</p>
 </div>
 
-<style>
-	h1 { color: green }
+<style lang="postcss">
 </style>
