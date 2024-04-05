@@ -62,32 +62,35 @@
 
 </script>
 
-<h1 class="text-red-600 font-bold underline">Vejove!</h1>
-<p>keep track of your health</p>
-<Textarea placeholder="Type your message here." />
+<h1 class="text-green-600 font-bold">Vejove</h1>
 
+<!-- symptom daily log -->
+<h2 class="text-2xl font-bold">Symptom Log:</h2>
+<Textarea placeholder="How are you feeling today?" />
+<Button class="bg-amber-600 text-green-300">save</Button>
+
+<!-- medication list -->
 <form class="flex w-full max-w-sm items-center space-x-2">
-	<Input type="email" placeholder="email" />
-	<Button type="submit">Subscribe</Button>
-  </form>
+	<Input type="medication" placeholder="medication" />
+	<Button type="submit">add</Button>
+</form>
 
-<Button class="bg-amber-600 text-green-300">Click me</Button>
-
-<h1>{fileData}</h1>
 <div>
-	<h2 class="text-3xl font-bold underline">Medication List:</h2>
+	<h2 class="text-2xl font-bold">Medications:</h2>
 	
 	<ul>
 		{#each MedicationList as med}
 			<li>{med.name}{med.dose}</li>
 		{/each}
 	</ul>
-	
-	<h2>Geolocation</h2>
-	<p>Your location is:</p>
-	<p>Latitude: {loc ? loc.coords.latitude : 'Getting location...'}</p>
-	<p>Longitude: {loc ? loc.coords.longitude : 'Getting location...'}</p>
 </div>
+
+<br>
+<h1>{fileData}</h1>
+<h2>Geolocation</h2>
+<p>Your location is:</p>
+<p>Latitude: {loc ? loc.coords.latitude : 'Getting location...'}</p>
+<p>Longitude: {loc ? loc.coords.longitude : 'Getting location...'}</p>
 
 <style lang="postcss">
 </style>
