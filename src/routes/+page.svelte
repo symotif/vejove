@@ -3,7 +3,6 @@
 	import { Geolocation } from '@capacitor/geolocation';
 	import { Filesystem, Directory, Encoding } from '@capacitor/filesystem';
 	import { Button } from "$lib/components/ui/button";
-	import { Textarea } from "$lib/components/ui/textarea";
 	import { Input } from "$lib/components/ui/input";
 
 	let fileData, loc;
@@ -62,35 +61,33 @@
 
 </script>
 
-<h1 class="text-green-600 font-bold">Vejove</h1>
+<div class="pt-16">
 
-<!-- symptom daily log -->
-<h2 class="text-2xl font-bold">Symptom Log:</h2>
-<Textarea placeholder="How are you feeling today?" />
-<Button class="bg-amber-600 text-green-300">save</Button>
-
-<!-- medication list -->
-<form class="flex w-full max-w-sm items-center space-x-2">
-	<Input type="medication" placeholder="medication" />
-	<Button type="submit">add</Button>
-</form>
-
-<div>
-	<h2 class="text-2xl font-bold">Medications:</h2>
 	
-	<ul>
-		{#each MedicationList as med}
-			<li>{med.name}{med.dose}</li>
-		{/each}
-	</ul>
-</div>
 
-<br>
-<h1>{fileData}</h1>
-<h2>Geolocation</h2>
-<p>Your location is:</p>
-<p>Latitude: {loc ? loc.coords.latitude : 'Getting location...'}</p>
-<p>Longitude: {loc ? loc.coords.longitude : 'Getting location...'}</p>
+	<div>
+		<h2 class="text-xl font-bold">Medications</h2>
+		
+		<ul>
+			{#each MedicationList as med}
+				<li>{med.name}{med.dose}</li>
+			{/each}
+		</ul>
+	</div>
+
+	<!-- medication list -->
+	<form class="flex w-full max-w-sm items-center space-x-2">
+		<Input type="medication" placeholder="medication" />
+		<Button type="submit">add</Button>
+	</form>
+	
+	<br>
+	<h1>{fileData}</h1>
+	<h2>Geolocation</h2>
+	<p>Your location is:</p>
+	<p>Latitude: {loc ? loc.coords.latitude : 'Getting location...'}</p>
+	<p>Longitude: {loc ? loc.coords.longitude : 'Getting location...'}</p>
+</div>
 
 <style lang="postcss">
 </style>
