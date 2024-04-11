@@ -1,22 +1,12 @@
-# create-svelte
+# vejove
+A personal health record app!
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
-
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Stack
+We are using TailwindCSS, Typescript with Sveltekit, and SQLite. Capacitor is helping us build for both android and iOS.
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Once you've cloned the project, install dependencies with `npm install` (or `pnpm install` or `yarn`), and then you can start a development server:
 
 ```bash
 npm run dev
@@ -25,7 +15,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
@@ -35,30 +25,22 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Developing Full Guide (includes HMR!)
 
+First make sure you have your SDK for android and/or iOS. And if you are using a physical device, make sure 
 
-# Development
-
-## setup
-1. clone
-2. `npm i`
-
-## running with hot module reloading
-1. (optional) plug in android device
+Steps:
+1. (optional) plug in physical device
 2. `npm run build`
-3. `npm run dev` in another terminal (you gotta keep this running while you code)
+3. In another terminal, run `npm run dev` and don't close it while you code. This will keep Vite running for HMR.
 4. `npx cap sync`
-5. `npx cap run android`
-6. choose your android device
+5. `npx cap run android` or `npx cap run ios`
+6. Choose your device in the terminal to code on!
 
-`npx cap copy` might be needed betwwen steps 4 and 5 when setting this up
+Note: `npx cap copy` might be needed between steps 4 and 5 when setting this up.
 
-# production
-
-to install it on your device:
-1. make sure to comment out the server options in the capacitor config, this is only for dev
-2. plug in your device (optional)
-3. `npm run install`
-4. choose your android device
-5. you can now unplug your device
+# Installing Vejove to your device
+1. Make sure to comment out the server options in the capacitor.config.ts file as this is only needed for development
+2. Plug in your device (optional)
+3. `npm run dev-install`
+4. Choose your android device. You can now unplug your device and use the app as intended.
