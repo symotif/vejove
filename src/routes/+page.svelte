@@ -5,6 +5,11 @@
 	import { Button } from "$lib/components/ui/button";
 	import { Input } from "$lib/components/ui/input";
 
+	/** @type {import('./$types').PageData} */
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+
 	let fileData, loc;
 
 	async function getCurrentPosition() {
@@ -88,6 +93,17 @@
 	<p>Latitude: {loc ? loc.coords.latitude : 'Getting location...'}</p>
 	<p>Longitude: {loc ? loc.coords.longitude : 'Getting location...'}</p>
 </div>
+
+<div>
+	<h1>{data.track.title}</h1>
+
+
+	<pre>
+		<code>{JSON.stringify(data, null, 2)}</code>
+	</pre>
+</div>
+
+
 
 <style lang="postcss">
 </style>
